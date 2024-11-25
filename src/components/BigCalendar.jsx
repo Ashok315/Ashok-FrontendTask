@@ -5,106 +5,93 @@ import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 
 const localizer = momentLocalizer(moment);
-
-// Dummy events data
-// const events = [
-//   {
-//     title: "Jai Shree Ram",
-//     start: new Date(2022, 4, 27, 8, 0),
-//     end: new Date(2022, 4, 27, 8, 15),
-//     description: "To be played in 15 min",
-//   },
-//   {
-//     title: "Radha 2023",
-//     start: new Date(2022, 4, 27, 9, 0),
-//     end: new Date(2022, 4, 27, 9, 30),
-//     description: "To be played",
-//   },
-//   {
-//     title: "Office Chill Track",
-//     start: new Date(2022, 4, 27, 10, 0),
-//     end: new Date(2022, 4, 27, 11, 0),
-//     description: "To be played",
-//   },
- 
-// ];
 const today=new Date();
 const events = [
     {
       title: "Jai Shree raam",
       start: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 12, 30),
       end: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 1, 0),
+      color: "#12BDB2"
     },
     {
       title: "Radha 2023",
       start: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 1, 0),
       end: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 1, 30),
+      color: "#8239BC"
     },
     {
       title: "B Prank",
       start: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 2, 30),
       end: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 3, 0),
+      color: "#8239BC"
     },
     {
       title: "Arlene mccoy track",
       start: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 4, 0),
       end: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 4, 30),
+      color: "#54A0CA",
     },
     {
       title: "Office chill track",
       start: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 5, 30),
       end: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 5, 30),
+      color: "#54A0CA",
     },
     {
       title: "Jacob Jones",
       start: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 6, 30),
       end: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 7, 0),
+      color: "#12BDB2"
     },
     {
       title: "Kristin Watson",
       start: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 8, 30),
       end: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 9, 0),
+      color:"#8239BC"
     },
     {
       title: "Esther Track",
       start: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 10, 30),
       end: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 11, 0),
+      color:"#8239BC"
     },
     {
       title: "Chloe McKinney Hits",
       start: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 13, 0),
       end: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 13, 30),
+      color: "#12BDB2"
     },
       {
         title: "Lunch",
         start: new Date(2024, 10, 24, 13, 0),
         end: new Date(2024, 10, 24, 14, 0),
+        color:"#8239BC"
       },
       {
         title: "Conference",
         start: new Date(2024, 10, 25, 9, 0),
-        end: new Date(2024, 10, 25, 17, 0),
+        end: new Date(2024, 10, 25, 11, 0),
+        color: "#12BDB2"
       },
       {
         title: "Workshop",
-        start: new Date(2024, 10, 26, 9, 0),
-        end: new Date(2024, 10, 26, 11, 0),
+        start: new Date(2024, 10, 26, 11, 0),
+        end: new Date(2024, 10, 26, 11, 30),
+        color: "#54A0CA",
       },
   ];
 
 const CustomEvent = ({ event }) => (
-  <div>
-    <strong>{event.title}</strong>
+  <div className="text-darker">
+    <p className="py-[3px]">{event.title}</p>
     <p className="text-gray-500 text-sm">{event.description}</p>
   </div>
 );
 
-
-
 const CustomToolbar = ({ label, onNavigate, view, onView, day=new Date().toDateString()}) => (
-  <div className="flex flex-col lg:flex-row items-center  justify-between mb-4  gap-6">
+  <div className="flex flex-col lg:flex-row items-center  justify-between mb-4  gap-6 lg:gap-3">
 
-            <div className="flex lg:flex-non  items-center gap-3">
+            <div className="flex lg:flex-non  items-center gap-3 lg:gap-1">
                 <button onClick={() => onNavigate("PREV")} className="px-3 py-2 border border-lightgray-400 rounded">
                     <img src="/public/leftIcon.svg" className="rotate-180" alt="" />
                 </button>
@@ -114,7 +101,7 @@ const CustomToolbar = ({ label, onNavigate, view, onView, day=new Date().toDateS
                 </button>
             </div>
         
-            <div className="flex items-center w-full lg:flex-1 lg:w-64 justify-between">
+            <div className="flex items-center w-full lg:flex-1 lg:w-64 justify-between text-[12px]">
                 {/* view buttons */}
                     <div>
 
@@ -139,7 +126,7 @@ const CustomToolbar = ({ label, onNavigate, view, onView, day=new Date().toDateS
 
                 {/* schedule button */}
                     <div>
-                        <button className="px-4 py-[7px]  bg-orange text-sm rounded-full text-white flex items-center gap-[5px]"> 
+                        <button className="px-4 py-[7px]  bg-orange text-[12px] rounded-full text-white flex items-center gap-[5px] lg:gap-[3px]"> 
                             <img src="/plusIcon.svg" alt="" className=" inline-block" />                        
                             Schedule session
                         </button>
@@ -149,9 +136,28 @@ const CustomToolbar = ({ label, onNavigate, view, onView, day=new Date().toDateS
   </div>
 );
 
+// Dynamically style events
+const eventPropGetter = (event) => {
+    if (event.color) {
+      return {
+        style: {
+          border: `4px solid ${event.color}`,
+          borderWidth:'0 0 0 4px',
+          backgroundColor: "#F3F4F6", 
+          color: "gray", 
+          borderRadius: "4px", 
+          padding: "5px",
+        },
+      };
+    }
+    return {};
+  };
+  
+
+
 const BigCalendar = () => {
   return ( 
-    <div className="p-1 bg-white rounded-lg w-full h-[100vh] text-[12.5px]">
+    <div className="p-1 bg-white rounded-lg w-full h-[100vh] text-[12px]">
       <Calendar
         localizer={localizer}
         events={events}
@@ -165,6 +171,7 @@ const BigCalendar = () => {
           event: CustomEvent,
           toolbar: CustomToolbar,
         }}
+        eventPropGetter={eventPropGetter}
       />
     </div>
   );

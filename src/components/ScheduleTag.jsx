@@ -46,7 +46,7 @@ const ScheduleTag = () => {
     "Work-Out",
   ];
 
-  const itemsPerPage = 15; // Number of tags to display per page
+  const itemsPerPage = 14; // Number of tags to display per page
   const [currentPage, setCurrentPage] = useState(0);
 
   // Calculate total pages
@@ -81,7 +81,7 @@ const ScheduleTag = () => {
         {currentTags.map((tag, index) => (
           <div
             key={`${tag}-${currentPage}-${index}`} 
-            className={`px-[12px] py-[5px] text-deepgray rounded-full text-[13px] mb-3 cursor-pointer ${
+            className={`px-[12px] py-[5px] text-deepgray rounded-full text-[12px] mb-3 cursor-pointer ${
               tag === "Listen"
                 ? "bg-lightgray-300 text-gray-800"
                 : tag === "Learn"

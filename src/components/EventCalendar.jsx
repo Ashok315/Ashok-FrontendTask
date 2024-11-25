@@ -10,8 +10,8 @@ const EventCalendar = () => {
   };
 
   return (
-    <div className="hidden xl:flex justify-center items-center  w-full py-4 md:pr-[6px]">
-      <div className="bg-white shadow-md rounded-lg w-full lg:w-full !border-none !outline-none">
+    <div className="hidden lg:flex justify-center items-center  w-full py-4 md:pr-[6px]">
+      <div className="bg-white py-4 rounded-lg w-full lg:w-full !border-none !outline-none">
         <Calendar
           value={date}
           onChange={handleDateChange}

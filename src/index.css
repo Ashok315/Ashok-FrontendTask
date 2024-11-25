@@ -22,11 +22,11 @@
 }
 
 .rbc-event {
-  background-color: #f0f0f0 !important;
-  color: #000d !important;
-  border-radius: 4pxd !important;
-  border: 1px solid #cccd !important;
-  padding: 4pxd !important;
+  background-color: #f0f0f0;
+  color: #000d;
+  border-radius: 4pxd;
+  border-left: 1px solid #cccd;
+  padding: 4px;
 }
 
 .rbc-event-content {
@@ -53,7 +53,6 @@
 .rbc-toolbar button {
   background-color: #f4f4f4 !important;
   border: 1px solid #dddd !important;
-  /* border-radius: 4px; */
   padding: 4px 8px !important;
   margin: 0 4px !important;
   font-size: 14px !important;

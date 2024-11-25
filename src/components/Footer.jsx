@@ -15,11 +15,11 @@ const Footer = () => {
          <div className='my-[14px] flex flex-col lg:flex-row justify-center items-center gap-[17px]'>
              <div className='px-[17px] lg:border-x lg:border-gray-500'>©CuriousHit 2023 - All Rights Reserved</div>
              <div className='gap-[30px] flex justify-center items-center'>
-                <div><img src="/facebookIcon.svg" alt="" /></div>
-                <div><img src="/twitterIcon.svg" alt="" /></div>
-                <div><img src="/linkedinIcon.svg" alt="" /></div>
-                <div><img src="/instagramIcon.svg" alt="" /></div>
-                <div><img src="/tiktokIcon.svg" alt="" /></div>                
+                <Link><img src="/facebookIcon.svg" alt="" /></Link>
+                <Link><img src="/twitterIcon.svg" alt="" /></Link>
+                <Link><img src="/linkedinIcon.svg" alt="" /></Link>
+                <Link><img src="/instagramIcon.svg" alt="" /></Link>
+                <Link><img src="/tiktokIcon.svg" alt="" /></Link>                
              </div>
          </div>
 

@@ -27,6 +27,7 @@ export default {
         },
         deepgray:"#212121",
         dark:"#312522",
+        darker:'#3B3E45',
 
         papayawhip: "#ffebd4",
         darkgray: "#b3b1b7",
