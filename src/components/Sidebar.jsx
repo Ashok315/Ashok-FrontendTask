@@ -158,10 +158,10 @@ export const Sidebar = ({menuOpen}) => {
             
     </div>
 
-    <div className='absolute bottom-[6rem] gap-[12px] cursor-pointer hidden md:flex justify-center text-xs md:text-sm items-center px-[20px] py-[10px] bg-black rounded-full'>
+   {/* partner button */}
+    <div className='absolute bottom-[6.5rem] gap-[12px] cursor-pointer hidden md:flex justify-center text-xs md:text-sm items-center px-[20px] py-[10px] bg-black rounded-full'>
         <div className='text-white'>Pro Partner</div>
         <img src="/public/partnerIcon.svg" alt="" width="15px" />
-
     </div>
    </>
   )
