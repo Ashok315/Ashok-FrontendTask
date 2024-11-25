@@ -11,6 +11,7 @@ const Layout = () => {
   return (
     <div className='flex h-full'>
       
+      {/* check menu opened or not */}
         {
         !menuToggle
         ?
@@ -25,7 +26,7 @@ const Layout = () => {
                     <Topbar></Topbar>  
 
                     {/* back button */}
-                    <div className='flex gap-[4px] items-center pl-[39px] text-lightgray-400 pt-[15px ]'>
+                    <div className='flex gap-[4px] items-center pl-[39px] text-lightgray-400 pt-[30px] md:pt-[15px ]'>
                         <img src="/arrowIcon.svg" alt="" />
                         <button>Back to Library</button>   
                     </div>
@@ -39,19 +40,7 @@ const Layout = () => {
            <div className='w-full md:w-[18%] md:block  pt-[120px] px-[17px] md:px-[10px] lg:px-[17px]'>
                     <Sidebar menuOpen={menuStatus}></Sidebar>
              </div>
-         
-            {/* right-section */}
-            <div className='bg w-full hidden md:block md:w-full pt-[30px] md:pt-[41px]'> 
-                <Topbar></Topbar>  
-
-                {/* back button */}
-                <div className='flex gap-[4px] items-center text-lightgray-300 pt-[15px ]'>
-                    <img src="/arrowIcon.svg" alt="" />
-                    <button>Back to Library</button>   
-                </div>
-                <Outlet></Outlet>   
-                <Footer></Footer>           
-            </div>  
+            
         </>}
        
 

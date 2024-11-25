@@ -74,7 +74,7 @@ const ScheduleTag = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto">
+    <div className="mx-auto">
       <h2 className="text-[16px] font-open-sans font-bold my-4">Schedule</h2>
       {/* Tags Container */}
       <div className="flex flex-wrap gap-[6px] items-center">

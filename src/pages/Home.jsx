@@ -28,7 +28,7 @@ const Home=()=>{
 
     return(
         <>
-        <div className="px-[39px]">
+        <div className="md:px-[39px]">
             <FilterTags listOfTags={listOfTag} navigateListItem={changeQuery} activeListItem={query}></FilterTags>
             {/* schedule-section */}
             <div  className="homeRightSection rounded-md h-full mb-[8rem]">

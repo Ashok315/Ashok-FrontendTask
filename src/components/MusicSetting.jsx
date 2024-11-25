@@ -10,7 +10,7 @@ const MusicSetting = () => {
   };
 
   return (
-    <div className="max-w-sm mx-auto py-[35px] bg-white rounded-md">
+    <div className="mx-auto py-[35px] bg-white rounded-md">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-[16px] font-bold font-open-sans text-dark">Music</h2>
         <button className="text-gray-500">
@@ -41,8 +41,8 @@ const MusicSetting = () => {
       </div>
       <div className="mt-4 flex justify-center">
         <button className="flex items-center space-x-5 bg-orange text-white py-2 px-5 rounded-full shadow hover:bg-yellow-500">
-          <img src="/shareIcon.svg" alt="" />
-          <span>Share</span>
+          <img src="/shareIcon.svg" width="15px" alt="" />
+          <span className="text-[16px]">Share</span>
         </button>
       </div>
     </div>
