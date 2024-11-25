@@ -20,9 +20,19 @@ export default {
         lightgray: {
           "100": "#e6e6e6",
           "200": "#e5e5e5",
-          "300": "#d8d8d8",
+          "300": "#e9e9e9",
+          "400": "#dcdfe3",
+          "500": "#d8d8d8",
+          "500": "#616161",
         },
-        dark:"#312522"
+        deepgray:"#212121",
+        dark:"#312522",
+
+        papayawhip: "#ffebd4",
+        darkgray: "#b3b1b7",
+        antiquewhite: "#e2dbc1",
+        lightgreen: "#EAFFDC",
+        mistyrose: "#ffdcdc",
       }
     },
   },

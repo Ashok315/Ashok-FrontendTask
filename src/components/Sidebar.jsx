@@ -114,7 +114,7 @@ const menuItems=[
 ]
 
 
-export const Sidebar = () => {
+export const Sidebar = ({menuOpen}) => {
   const location=useLocation();
   const [subMenuOpen,setSubmenuOpen]=useState({});
 
@@ -126,23 +126,25 @@ export const Sidebar = () => {
   };
 
   return (
-    <div className='capitalize text-[16px] md:text-[12px] lg:text-[16px] '>
+    <>
+    <div className='capitalize text-[16px] md:text-[12px] lg:text-[16px]'>
+    
         {menuItems.map((item)=>(
             <div key={item.label} className={`flex items-start gap-[16px] mb-[15px] pl-[20px] py-[5px] font-raleway relative ${location.pathname==item.href?"text-orange font-semibold rounded-lg bg-light-hover":""}`}>
                 <img src={item.icon} alt={`${item.label}-icon`} className='mt-[0.2rem] md:w-[14px] lg:w-[20px]'></img>
-                <div>
-                    <div href={item.href} className='cursor-pointer' onClick={()=>toggleSubMenu(item.label)} >
+                <div className=''>
+                    <div href={item.href} className='cursor-pointer' onClick={()=>{toggleSubMenu(item.label),!item.subItems&&menuOpen(false)}} >
                        
                         <div>{item.label}</div>
-                        {item.subItems&&<img src='/sideArrowIcon.svg' className='absolute right-5 top-[11px]'></img>}
+                        {item.subItems&&<div className='absolute let-[50%] right-[40%] md:right-0  top-[13px]'><img src='/sideArrowIcon.svg' className=''></img></div>}
                         <div className={`${subMenuOpen[item.label] ? "" : "hidden"}`}>
                         
                             {
                                 item.subItems?.map((subItem)=>(
-                                <div key={subItem.label}  className={`flex gap-[10px] pt-[10px] font-open-sans text-submenu-color`}>
+                                <Link key={subItem.label} onClick={()=>menuOpen(false)}  className={`flex gap-[10px] pt-[10px] font-open-sans text-submenu-color`}>
                                     <img src={`${subItem.icon}`} alt={`${subItem.label}`}></img>
-                                    <Link href={subItem.href}>{subItem.label}</Link> 
-                                </div>
+                                    <div href={subItem.href}>{subItem.label}</div> 
+                                </Link>
                             ))            
                           }  
                         </div> 
@@ -152,8 +154,16 @@ export const Sidebar = () => {
                           
             </div>
         ))}
-    
+
+            
     </div>
+
+    <div className='absolute bottom-[6rem] gap-[12px] cursor-pointer hidden md:flex justify-center text-xs md:text-sm items-center px-[20px] py-[10px] bg-black rounded-full'>
+        <div className='text-white'>Pro Partner</div>
+        <img src="/public/partnerIcon.svg" alt="" width="15px" />
+
+    </div>
+   </>
   )
 }
 

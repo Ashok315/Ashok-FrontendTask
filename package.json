@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "date-fns": "^4.1.0",
     "frontend-task": "file:",
     "react": "^18.3.1",
     "react-big-calendar": "^1.15.0",

@@ -10,12 +10,13 @@ const EventCalendar = () => {
   };
 
   return (
-    <div className="flex justify-center items-center">
-      <div className="p-4 bg-white shadow-md rounded-lg w-[80%]">
+    <div className="hidden xl:flex justify-center items-center  w-full py-4 md:pr-[6px]">
+      <div className="bg-white shadow-md rounded-lg w-full lg:w-full !border-none !outline-none">
         <Calendar
           value={date}
           onChange={handleDateChange}
-          showNeighboringMonth={false} // Hide extra days from other months
+        //   showNeighboringMonth={false}
+          className="mt-3 text-sm  !border-none !shadow-none !lowercase"
         />
       </div>
     </div>

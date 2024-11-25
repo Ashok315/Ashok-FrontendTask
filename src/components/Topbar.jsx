@@ -2,9 +2,9 @@ import React from 'react'
 
  const Topbar = () => {
   return (
-    <div className='flex justify-between items-center px-[45px]'>
+    <div className='flex justify-end md:justify-between gap-[7px] items-center px-[45px]'>
         {/* search button */}
-        <div className='ml-[25%] relative'>
+        <div className='lg:ml-[25%] relative'>
             <input type="text" className='text-xs w-full ring-1 ring-gray-300 py-[5px] ps-[30px] pe-[12px] rounded-full outline-none' placeholder='Search'/>
              <img  src="/searchIcon.svg" alt="" width="27px" className='absolute ml-[5px] top-[1px]' />
         </div>
